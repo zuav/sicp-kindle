@@ -47,7 +47,7 @@
   designated new value. Data objects for which mutators are defined
   are known as <em>mutable data objects</em>.</p>
 
-  <p>Chapter&nbsp;2 introduced pairs as a general-purpose ``glue''
+  <p>Chapter&nbsp;2 introduced pairs as a general-purpose ''glue''
   for synthesizing compound data. We begin this section by defining
   basic mutators for pairs, so that pairs can serve as building
   blocks for constructing mutable data objects. These mutators
@@ -284,7 +284,7 @@
 
   &nbsp;&nbsp;(loop&nbsp;x&nbsp;'()))<br /></tt></p>
 
-  <p><tt>Loop</tt> uses the ``temporary'' variable <tt>temp</tt> to
+  <p><tt>Loop</tt> uses the ''temporary'' variable <tt>temp</tt> to
   hold the old value of the <tt>cdr</tt> of <tt>x</tt>, since the
   <tt>set-cdr!</tt> on the next line destroys the <tt>cdr</tt>.
   Explain what <tt>mystery</tt> does in general. Suppose <tt>v</tt>
@@ -303,7 +303,7 @@
 
   <p><a name="%_idx_3176"></a><a name="%_idx_3178"></a> <a name="%_idx_3180"></a><a name="%_idx_3182"></a>We mentioned in
   section&nbsp;<a href="book-Z-H-20.html#%_sec_3.1.3">3.1.3</a> the
-  theoretical issues of ``sameness'' and ``change'' raised by the
+  theoretical issues of ''sameness'' and ''change'' raised by the
   introduction of assignment. These issues arise in practice when
   individual pairs are <em>shared</em> among different data
   objects. For example, consider the structure formed by</p>
@@ -370,7 +370,7 @@
   are distinct, although the actual symbols are shared.<a href="#footnote_Temp_356" name="call_footnote_Temp_356" id="call_footnote_Temp_356"><sup><small>19</small></sup></a></p>
 
   <p>When thought of as a list, <tt>z1</tt> and <tt>z2</tt> both
-  represent ``the same'' list, <tt>((a b) a b)</tt>. In general,
+  represent ''the same'' list, <tt>((a b) a b)</tt>. In general,
   sharing is completely undetectable if we operate on lists using
   only <tt>cons</tt>, <tt>car</tt>, and <tt>cdr</tt>. However, if
   we allow mutators on list structure, sharing becomes significant.
@@ -382,7 +382,7 @@
   &nbsp;&nbsp;(set-car!&nbsp;(car&nbsp;x)&nbsp;'wow)<br />
   &nbsp;&nbsp;x)<br /></tt></p>
 
-  <p>Even though <tt>z1</tt> and <tt>z2</tt> are ``the same''
+  <p>Even though <tt>z1</tt> and <tt>z2</tt> are ''the same''
   structure, applying <tt>set-to-wow!</tt> to them yields different
   results. With <tt>z1</tt>, altering the <tt>car</tt> also changes
   the <tt>cdr</tt>, because in <tt>z1</tt> the <tt>car</tt> and the
@@ -431,7 +431,7 @@
 
   <p><a name="%_thm_3.16"></a> <b>Exercise 3.16.</b>&nbsp;&nbsp;Ben
   Bitdiddle decides to write a procedure to count the number of
-  pairs in any list structure. ``It's easy,'' he reasons. ``The
+  pairs in any list structure. ''It's easy,'' he reasons. ''The
   number of pairs in any structure is the number in the
   <tt>car</tt> plus the number in the <tt>cdr</tt> plus one more to
   count the current pair.'' So Ben writes the following
@@ -859,13 +859,13 @@
   (delete-queue!&nbsp;q1)<br />
   <i>(()&nbsp;b)</i><br /></tt></p>
 
-  <p>``It's all wrong!'' he complains. ``The interpreter's response
+  <p>''It's all wrong!'' he complains. ''The interpreter's response
   shows that the last item is inserted into the queue twice. And
   when I delete both items, the second <tt>b</tt> is still there,
   so the queue isn't empty, even though it's supposed to be.'' Eva
   Lu Ator suggests that Ben has misunderstood what is happening.
-  ``It's not that the items are going into the queue twice,'' she
-  explains. ``It's just that the standard Lisp printer doesn't know
+  ''It's not that the items are going into the queue twice,'' she
+  explains. ''It's just that the standard Lisp printer doesn't know
   how to make sense of the queue representation. If you want to see
   the queue printed correctly, you'll have to define your own print
   procedure for queues.'' Explain what Eva Lu is talking about. In
@@ -895,7 +895,7 @@
   representation.</p>
 
   <p><a name="%_thm_3.23"></a> <b>Exercise
-  3.23.</b>&nbsp;&nbsp;<a name="%_idx_3264"></a><a name="%_idx_3266"></a>A <em>deque</em> (``double-ended queue'') is a
+  3.23.</b>&nbsp;&nbsp;<a name="%_idx_3264"></a><a name="%_idx_3266"></a>A <em>deque</em> (''double-ended queue'') is a
   sequence in which items can be inserted and deleted at either the
   front or the rear. Operations on deques are the constructor
   <tt>make-deque</tt>, the predicate <tt>empty-deque?</tt>,
@@ -931,7 +931,7 @@
   of the table. In order to have a place that we can change when we
   add a new record to the table, we build the table as a <a name="%_idx_3276"></a><a name="%_idx_3278"></a><em>headed list</em>. A
   headed list has a special backbone pair at the beginning, which
-  holds a dummy ``record'' -- in this case the arbitrarily chosen
+  holds a dummy ''record'' -- in this case the arbitrarily chosen
   symbol <tt>*table*</tt>. Figure&nbsp;<a href="#%_fig_3.22">3.22</a> shows the box-and-pointer diagram for the
   table</p>
 
@@ -1120,7 +1120,7 @@
   separate <tt>lookup</tt> and <tt>insert!</tt> procedures for each
   table. We can do this by representing a table procedurally, as an
   object that maintains an internal table as part of its local
-  state. When sent an appropriate message, this ``table object''
+  state. When sent an appropriate message, this ''table object''
   supplies the procedure with which to operate on the internal
   table. Here is a generator for two-dimensional tables represented
   in this fashion:</p>
@@ -1206,7 +1206,7 @@
   only a number within some tolerance of it. Design a table
   constructor <tt>make-table</tt> that takes as an argument a
   <tt>same-key?</tt> procedure that will be used to test
-  ``equality'' of keys. <tt>Make-table</tt> should return a
+  ''equality'' of keys. <tt>Make-table</tt> should return a
   <tt>dispatch</tt> procedure that can be used to access
   appropriate <tt>lookup</tt> and <tt>insert!</tt> procedures for a
   local table.</p>
@@ -1302,7 +1302,7 @@
   by digital systems engineers. In this section we design a system
   for performing digital logic simulations. This system typifies a
   kind of program called an <a name="%_idx_3330"></a><a name="%_idx_3332"></a><em>event-driven simulation</em>, in which
-  actions (``events'') trigger further events that happen at a
+  actions (''events'') trigger further events that happen at a
   later time, which in turn trigger more events, and so so.</p>
 
   <p>Our computational model of a circuit will be composed of
@@ -1386,7 +1386,7 @@
 
   <p>We will now build a program for modeling the digital logic
   circuits we wish to study. The program will construct
-  computational objects modeling the wires, which will ``hold'' the
+  computational objects modeling the wires, which will ''hold'' the
   signals. Function boxes will be modeled by procedures that
   enforce the correct relationships among the signals.</p>
 
@@ -1494,7 +1494,7 @@
   function boxes</a></h4>
 
   <p><a name="%_idx_3368"></a> The primitive function boxes
-  implement the ``forces'' by which a change in the signal on one
+  implement the ''forces'' by which a change in the signal on one
   wire influences the signals on other wires. To build function
   boxes, we use the following operations on wires:</p>
 
@@ -1792,7 +1792,7 @@
   simulation</a></h4>
 
   <p><a name="%_idx_3428"></a><a name="%_idx_3430"></a> The
-  following procedure, which places a ``probe'' on a wire, shows
+  following procedure, which places a ''probe'' on a wire, shows
   the simulator in action. The probe tells the wire that, whenever
   its signal changes value, it should print the new signal value,
   together with the current time and a name that identifies the
@@ -2074,7 +2074,7 @@
   constraints in order to express more complex relations. We
   combine constraints by constructing <a name="%_idx_3514"></a><em>constraint networks</em>, in which
   constraints are joined by <a name="%_idx_3516"></a><em>connectors</em>. A connector is an object
-  that ``holds'' a value that may participate in one or more
+  that ''holds'' a value that may participate in one or more
   constraints. For example, we know that the relationship between
   Fahrenheit and Celsius temperatures is</p>
 
@@ -2349,7 +2349,7 @@
   <p><tt>Adder</tt> connects the new adder to the designated
   connectors and returns it as its value. The procedure
   <tt>me</tt>, which represents the adder, acts as a dispatch to
-  the local procedures. The following ``syntax interfaces'' (see
+  the local procedures. The following ''syntax interfaces'' (see
   footnote&nbsp;<a href="#footnote_Temp_385">27</a> in
   section&nbsp;<a href="#%_sec_3.3.4">3.3.4</a>) are used in
   conjunction with the dispatch:</p>
@@ -2700,7 +2700,7 @@
   (define&nbsp;C&nbsp;(make-connector))<br />
   (define&nbsp;F&nbsp;(celsius-fahrenheit-converter&nbsp;C))<br /></tt></p>
 
-  <p>Here <tt>c+</tt>, <tt>c*</tt>, etc. are the ``constraint''
+  <p>Here <tt>c+</tt>, <tt>c*</tt>, etc. are the ''constraint''
   versions of the arithmetic operations. For example, <tt>c+</tt>
   takes two connectors as arguments and returns a connector that is
   related to these by an adder constraint:</p>
@@ -2727,7 +2727,7 @@
 
     <p><a href="#call_footnote_Temp_350" name="footnote_Temp_350" id="footnote_Temp_350"><sup><small>17</small></sup></a> We see
     from this that mutation operations on lists can create
-    ``garbage'' that is not part of any accessible structure. We
+    ''garbage'' that is not part of any accessible structure. We
     will see in section&nbsp;<a href="book-Z-H-33.html#%_sec_5.3.2">5.3.2</a> that Lisp
     memory-management systems include a <a name="%_idx_3156"></a><em>garbage collector</em>, which identifies
     and recycles the memory space used by unneeded pairs.</p>
@@ -2748,19 +2748,19 @@
 
     <p><a href="#call_footnote_Temp_357" name="footnote_Temp_357" id="footnote_Temp_357"><sup><small>20</small></sup></a> The
     subtleties of dealing with sharing of mutable data objects
-    reflect the underlying issues of ``sameness'' and ``change''
+    reflect the underlying issues of ''sameness'' and ''change''
     that were raised in section&nbsp;<a href="book-Z-H-20.html#%_sec_3.1.3">3.1.3</a>. We mentioned there
     that admitting change to our language requires that a compound
-    object must have an ``identity'' that is something different
+    object must have an ''identity'' that is something different
     from the pieces from which it is composed. In Lisp, we consider
-    this ``identity'' to be the quality that is tested by
+    this ''identity'' to be the quality that is tested by
     <tt>eq?</tt>, i.e., by equality of pointers. Since in most Lisp
     implementations a pointer is essentially a memory address, we
-    are ``solving the problem'' of defining the identity of objects
-    by stipulating that a data object ``itself'' is the information
+    are ''solving the problem'' of defining the identity of objects
+    by stipulating that a data object ''itself'' is the information
     stored in some particular set of memory locations in the
     computer. This suffices for simple Lisp programs, but is hardly
-    a general way to resolve the issue of ``sameness'' in
+    a general way to resolve the issue of ''sameness'' in
     computational models.</p>
 
     <p><a href="#call_footnote_Temp_364" name="footnote_Temp_364" id="footnote_Temp_364"><sup><small>21</small></sup></a> On the
@@ -2786,7 +2786,7 @@
 
     <p><a href="#call_footnote_Temp_372" name="footnote_Temp_372" id="footnote_Temp_372"><sup><small>25</small></sup></a> Thus,
     the first backbone pair is the object that represents the table
-    ``itself''; that is, a pointer to the table is a pointer to
+    ''itself''; that is, a pointer to the table is a pointer to
     this pair. This same backbone pair always starts the table. If
     we did not arrange things in this way, <tt>insert!</tt> would
     have to return a new value for the start of the table when it
@@ -2805,8 +2805,8 @@
     <p><a href="#call_footnote_Temp_385" name="footnote_Temp_385" id="footnote_Temp_385"><sup><small>27</small></sup></a> These
     procedures are simply syntactic sugar that allow <a name="%_idx_3400"></a><a name="%_idx_3402"></a>us to use ordinary
     procedural syntax to access the local procedures of objects. It
-    is striking that we can interchange the role of ``procedures''
-    and ``data'' in such a simple way. For example, if we write
+    is striking that we can interchange the role of ''procedures''
+    and ''data'' in such a simple way. For example, if we write
     <tt>(wire 'get-signal)</tt> we think of <tt>wire</tt> as a
     procedure that is called with the message <tt>get-signal</tt>
     as input. Alternatively, writing <tt>(get-signal wire)</tt>
@@ -2814,7 +2814,7 @@
     is the input to a procedure <tt>get-signal</tt>. The truth of
     the matter is that, in a language in which we can deal with
     procedures as objects, there is no fundamental difference
-    between ``procedures'' and ``data,'' and we can choose our
+    between ''procedures'' and ''data,'' and we can choose our
     syntactic sugar to allow us to program in whatever style we
     choose.</p>
 
@@ -2827,7 +2827,7 @@
 
     <p><a href="#call_footnote_Temp_391" name="footnote_Temp_391" id="footnote_Temp_391"><sup><small>29</small></sup></a> Observe
     that the <tt>if</tt> expression in this procedure has no
-    &lt;<em>alternative</em>&gt; expression. Such a ``one-armed
+    &lt;<em>alternative</em>&gt; expression. Such a ''one-armed
     <tt>if</tt> statement'' <a name="%_idx_3474"></a><a name="%_idx_3476"></a>is used to decide whether to do something,
     rather than to select between two expressions. An <tt>if</tt>
     expression returns an unspecified value if the predicate is
@@ -2861,7 +2861,7 @@
     cumbersome when dealing with operations on compound data. For
     example, if we wanted to compute the product (<em>a</em> +
     <em>b</em>) &middot; (<em>c</em> + <em>d</em>), where the
-    variables represent vectors, we could work in ``imperative
+    variables represent vectors, we could work in ''imperative
     style,'' using procedures that set the values of designated
     vector arguments but do not themselves return vectors as
     values:</p>

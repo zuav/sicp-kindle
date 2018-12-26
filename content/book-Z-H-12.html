@@ -119,7 +119,7 @@
   is strong evidence that there is a useful abstraction waiting to
   be brought to the surface. Indeed, mathematicians long ago
   identified the abstraction of <a name="%_idx_982"></a><a name="%_idx_984"></a><em>summation of a series</em> and invented
-  ``sigma <a name="%_idx_986"></a><a name="%_idx_988"></a>notation,'' for example</p>
+  ''sigma <a name="%_idx_986"></a><a name="%_idx_988"></a>notation,'' for example</p>
 
   <div align="left"><img src="ch1-Z-G-27.gif" border="0" /></div>
 
@@ -134,7 +134,7 @@
   expresses the concept of summation itself rather than only
   procedures that compute particular sums. We can do so readily in
   our procedural language by taking the common template shown above
-  and transforming the ``slots'' into formal parameters:</p>
+  and transforming the ''slots'' into formal parameters:</p>
 
   <p><tt><a name="%_idx_990"></a>(define&nbsp;(sum&nbsp;term&nbsp;a&nbsp;next&nbsp;b)<br />
 
@@ -330,8 +330,8 @@
   <tt>pi-next</tt> just so we can use them as arguments to our
   higher-order procedure. Rather than define <tt>pi-next</tt> and
   <tt>pi-term</tt>, it would be more convenient to have a way to
-  directly specify ``the procedure that returns its input
-  incremented by 4'' and ``the procedure that returns the
+  directly specify ''the procedure that returns its input
+  incremented by 4'' and ''the procedure that returns the
   reciprocal of its input times its input plus 2.'' We can do this
   by introducing the special form <tt>lambda</tt>, which creates
   procedures. Using <tt>lambda</tt> we can describe what we want
@@ -669,7 +669,7 @@
   the number of steps required grows as <img src="book-Z-G-D-3.gif" border="0" />(<tt>log</tt>( <em>L</em>/<em>T</em>)), where
   <em>L</em> is the length of the original interval and <em>T</em>
   is the error tolerance (that is, the size of the interval we will
-  consider ``small enough''). Here is a procedure that implements
+  consider ''small enough''). Here is a procedure that implements
   this strategy:</p>
 
   <p><tt><a name="%_idx_1084"></a>(define&nbsp;(search&nbsp;f&nbsp;neg-point&nbsp;pos-point)<br />
@@ -705,7 +705,7 @@
   is the possibility that the test value is&nbsp;0, in which case
   the midpoint is itself the root we are searching for.</p>
 
-  <p>To test whether the endpoints are ``close enough'' we can use
+  <p>To test whether the endpoints are ''close enough'' we can use
   a procedure similar to the one used in section&nbsp;<a href="book-Z-H-10.html#%_sec_1.1.7">1.1.7</a> for computing square
   roots:<a href="#footnote_Temp_104" name="call_footnote_Temp_104" id="call_footnote_Temp_104"><sup><small>55</small></sup></a></p>
 
@@ -1067,7 +1067,7 @@
 
   <p><a name="%_idx_1186"></a><a name="%_idx_1188"></a><a name="%_idx_1190"></a>In order to implement Newton's method as a
   procedure, we must first express the idea of derivative. Note
-  that ``derivative,'' like average damping, is something that
+  that ''derivative,'' like average damping, is something that
   transforms a function into another function. For instance, the
   derivative of the function <em>x</em> <img src="book-Z-G-D-17.gif" border="0" /> <em>x</em><sup>3</sup> is the
   function <em>x</em> <img src="book-Z-G-D-17.gif" border="0" />
@@ -1206,7 +1206,7 @@
   <p>In general, programming languages impose restrictions on the
   ways in which computational elements can be manipulated. Elements
   with the fewest restrictions are said to have <a name="%_idx_1218"></a><em>first-class</em> status. Some of the
-  ``rights and privileges'' of first-class elements are:<a href="#footnote_Temp_121" name="call_footnote_Temp_121" id="call_footnote_Temp_121"><sup><small>64</small></sup></a></p>
+  ''rights and privileges'' of first-class elements are:<a href="#footnote_Temp_121" name="call_footnote_Temp_121" id="call_footnote_Temp_121"><sup><small>64</small></sup></a></p>
 
   <ul>
     <li>They may be named by variables.</li>
@@ -1397,7 +1397,7 @@
     about evaluation.</p>
 
     <p><a href="#call_footnote_Temp_104" name="footnote_Temp_104" id="footnote_Temp_104"><sup><small>55</small></sup></a> We have
-    used 0.001 as a representative ``small'' number to indicate a
+    used 0.001 as a representative ''small'' number to indicate a
     tolerance for the acceptable error in a calculation. The
     appropriate tolerance for a real calculation depends upon the
     problem to be solved and the limitations of the computer and
@@ -1415,7 +1415,7 @@
     <tt>cos</tt> button until you obtain the fixed point.</p>
 
     <p><a href="#call_footnote_Temp_108" name="footnote_Temp_108" id="footnote_Temp_108"><sup><small>58</small></sup></a>
-    <img src="book-Z-G-D-17.gif" border="0" /> <a name="%_idx_1122"></a><a name="%_idx_1124"></a>(pronounced ``maps
+    <img src="book-Z-G-D-17.gif" border="0" /> <a name="%_idx_1122"></a><a name="%_idx_1124"></a>(pronounced ''maps
     to'') is the mathematician's way of writing <tt>lambda</tt>.
     <em>y</em> <img src="book-Z-G-D-17.gif" border="0" />
     <em>x</em>/<em>y</em> means <tt>(lambda(y) (/ x y))</tt>, that

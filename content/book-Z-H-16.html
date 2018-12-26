@@ -57,10 +57,10 @@
   (syntactic entities). The common practice in natural languages is
   to use quotation marks to indicate that a word or a sentence is
   to be treated literally as a string of characters. For instance,
-  the first letter of ``John'' is clearly ``J.'' If we tell
-  somebody ``say your name aloud,'' we expect to hear that person's
-  name. However, if we tell somebody ``say `your name' aloud,'' we
-  expect to hear the words ``your name.'' Note that we are forced
+  the first letter of ''John'' is clearly ''J.'' If we tell
+  somebody ''say your name aloud,'' we expect to hear that person's
+  name. However, if we tell somebody ''say `your name' aloud,'' we
+  expect to hear the words ''your name.'' Note that we are forced
   to nest quotation marks to describe what somebody else might
   say.<a href="#footnote_Temp_227" name="call_footnote_Temp_227" id="call_footnote_Temp_227"><sup><small>32</small></sup></a></p>
 
@@ -211,7 +211,7 @@
   follow the same strategy of data abstraction that we followed in
   developing the rational-number system of section&nbsp;<a href="book-Z-H-14.html#%_sec_2.1.1">2.1.1</a>. That is, we will first
   define a differentiation algorithm that operates on abstract
-  objects such as ``sums,'' ``products,'' and ``variables'' without
+  objects such as ''sums,'' ''products,'' and ''variables'' without
   worrying about how these are to be represented. Only afterward
   will we address the representation problem.</p>
 
@@ -529,7 +529,7 @@
 
   <p>Although this is quite an improvement, the third example shows
   that there is still a long way to go before we get a program that
-  puts expressions into a form that we might agree is ``simplest.''
+  puts expressions into a form that we might agree is ''simplest.''
   The problem of algebraic simplification is complex because, among
   other reasons, a form that may be simplest for one purpose may
   not be for another.</p>
@@ -607,7 +607,7 @@
   <p><a name="%_idx_2102"></a>Informally, a set is simply a
   collection of distinct objects. To give a more precise definition
   we can employ the method of data abstraction. That is, we define
-  ``set'' by specifying the operations that are to be used on sets.
+  ''set'' by specifying the operations that are to be used on sets.
   These are <tt>union-set</tt>, <tt>intersection-set</tt>,
   <tt>element-of-set?</tt>, and <tt>adjoin-set</tt>. <a name="%_idx_2104"></a><tt>Element-of-set?</tt> is a predicate that
   determines whether a given element is a member of a set. <a name="%_idx_2106"></a><tt>Adjoin-set</tt> takes an object and a set as
@@ -829,9 +829,9 @@
   <p><a name="%_idx_2136"></a><a name="%_idx_2138"></a><a name="%_idx_2140"></a><a name="%_idx_2142"></a><a name="%_idx_2144"></a><a name="%_idx_2146"></a> We can do better than
   the ordered-list representation by arranging the set elements in
   the form of a tree. Each node of the tree holds one element of
-  the set, called the ``entry'' at that node, and a link to each of
-  two other (possibly empty) nodes. The ``left'' link points to
-  elements smaller than the one at the node, and the ``right'' link
+  the set, called the ''entry'' at that node, and a link to each of
+  two other (possibly empty) nodes. The ''left'' link points to
+  elements smaller than the one at the node, and the ''right'' link
   to elements greater than the one at the node.
   Figure&nbsp;<a href="#%_fig_2.16">2.16</a> shows some trees that
   represent the set {1,3,5,7,9,11}. The same set may be represented
@@ -864,7 +864,7 @@
   We begin by comparing <em>x</em> with the entry in the top node.
   If <em>x</em> is less than this, we know that we need only search
   the left subtree; if <em>x</em> is greater, we need only search
-  the right subtree. Now, if the tree is ``balanced,'' each of
+  the right subtree. Now, if the tree is ''balanced,'' each of
   these subtrees will be about half the size of the original. Thus,
   in one step we have reduced the problem of searching a tree of
   size <em>n</em> to searching a tree of size <em>n</em>/2. Since
@@ -944,7 +944,7 @@
 
   <p>The above claim that searching the tree can be performed in a
   logarithmic number of steps rests on the assumption that the tree
-  is <a name="%_idx_2164"></a><a name="%_idx_2166"></a>``balanced,'' i.e., that the left and the right
+  is <a name="%_idx_2164"></a><a name="%_idx_2166"></a>''balanced,'' i.e., that the left and the right
   subtree of every tree have approximately the same number of
   elements, so that each subtree contains about half the elements
   of its parent. But how can we be certain that the trees we
@@ -952,7 +952,7 @@
   tree, adding elements with <tt>adjoin-set</tt> may produce an
   unbalanced result. Since the position of a newly adjoined element
   depends on how the element compares with the items already in the
-  set, we can expect that if we add elements ``randomly'' the tree
+  set, we can expect that if we add elements ''randomly'' the tree
   will tend to be balanced on the average. But this is not a
   guarantee. For example, if we start with an empty set and adjoin
   the numbers 1 through 7 in sequence we end up with the highly
@@ -1130,14 +1130,14 @@
 
   <p>Of course, there are better ways to represent large sets than
   as unordered lists. Information-retrieval systems in which
-  records have to be ``randomly accessed'' are typically
+  records have to be ''randomly accessed'' are typically
   implemented by a tree-based method, such as the binary-tree
   representation discussed previously. In designing such a system
   the methodology of data abstraction can be a great help. The
   designer can create an initial implementation using a simple,
   straightforward representation such as unordered lists. This will
   be unsuitable for the eventual system, but it can be useful in
-  providing a ``quick and dirty'' data base with which to test the
+  providing a ''quick and dirty'' data base with which to test the
   rest of the system. Later on, the data representation can be
   modified to be more sophisticated. If the data base is accessed
   in terms of abstract selectors and constructors, this change in
@@ -1323,8 +1323,8 @@
   <h4><a href="book-Z-H-4.html#%_toc_%_sec_Temp_257">Generating
   Huffman trees</a></h4>
 
-  <p>Given an ``alphabet'' of symbols and their relative
-  frequencies, how do we construct the ``best'' code? (In other
+  <p>Given an ''alphabet'' of symbols and their relative
+  frequencies, how do we construct the ''best'' code? (In other
   words, which tree will encode messages with the fewest bits?)
   Huffman gave an algorithm for doing this and showed that the
   resulting code is indeed the best variable-length code for
@@ -1532,7 +1532,7 @@
 
   <p>The procedure <tt>decode-1</tt> takes two arguments: the list
   of remaining bits and the current position in the tree. It keeps
-  moving ``down'' the tree, choosing a left or a right branch
+  moving ''down'' the tree, choosing a left or a right branch
   according to whether the next bit in the list is a zero or a one.
   (This is done with the procedure <tt>choose-branch</tt>.) When it
   reaches a leaf, it returns the symbol at that leaf as the next
@@ -1655,7 +1655,7 @@
   2.70.</b>&nbsp;&nbsp;<a name="%_idx_2282"></a>The following
   eight-symbol alphabet with associated relative frequencies was
   designed to efficiently encode the lyrics of 1950s rock songs.
-  (Note that the ``symbols'' of an ``alphabet'' need not be
+  (Note that the ''symbols'' of an ''alphabet'' need not be
   individual letters.)</p>
 
   <table border="0">
@@ -1749,19 +1749,19 @@
     Allowing quotation in a language wreaks havoc with the ability
     to reason about the language in simple terms, because it
     destroys the notion that equals can be substituted for equals.
-    For example, three is one plus two, but the word ``three'' is
-    not the phrase ``one plus two.'' Quotation is powerful because
+    For example, three is one plus two, but the word ''three'' is
+    not the phrase ''one plus two.'' Quotation is powerful because
     it gives us a way to build expressions that manipulate other
     expressions (as we will see when we write an interpreter in
     chapter&nbsp;4). But allowing statements in a language that
     talk about other statements in that language makes it very
-    difficult to maintain any coherent principle of what ``equals
+    difficult to maintain any coherent principle of what ''equals
     can be substituted for equals'' should mean. For example, if we
     know that <a name="%_idx_1996"></a>the evening star is the
-    morning star, then from the statement ``the evening star is
-    Venus'' we can deduce ``the morning star is Venus.'' However,
-    given that ``John knows that the evening star is Venus'' we
-    cannot infer that ``John knows that the morning star is
+    morning star, then from the statement ''the evening star is
+    Venus'' we can deduce ''the morning star is Venus.'' However,
+    given that ''John knows that the evening star is Venus'' we
+    cannot infer that ''John knows that the morning star is
     Venus.''</p>
 
     <p><a href="#call_footnote_Temp_228" name="footnote_Temp_228" id="footnote_Temp_228"><sup><small>33</small></sup></a> The
@@ -1791,10 +1791,10 @@
     <tt>(list&nbsp;'car&nbsp;(list&nbsp;'quote&nbsp;'(a&nbsp;b&nbsp;c)))</tt>.</p>
 
     <p><a href="#call_footnote_Temp_230" name="footnote_Temp_230" id="footnote_Temp_230"><sup><small>35</small></sup></a> We can
-    consider two symbols to be ``the same'' if they consist of the
+    consider two symbols to be ''the same'' if they consist of the
     same characters in the same order. Such a definition skirts a
     deep issue that we are not yet ready to address: the meaning of
-    ``sameness'' in a programming language. We will return to this
+    ''sameness'' in a programming language. We will return to this
     in chapter&nbsp;3 (section&nbsp;<a href="book-Z-H-20.html#%_sec_3.1.3">3.1.3</a>).</p>
 
     <p><a href="#call_footnote_Temp_233" name="footnote_Temp_233" id="footnote_Temp_233"><sup><small>36</small></sup></a> In
@@ -1809,25 +1809,25 @@
     <tt>equal?</tt> if they are numerically equal.</p>
 
     <p><a href="#call_footnote_Temp_240" name="footnote_Temp_240" id="footnote_Temp_240"><sup><small>37</small></sup></a> If we
-    want to be more formal, we can specify ``consistent with the
+    want to be more formal, we can specify ''consistent with the
     interpretations given above'' to mean that the operations
     satisfy a collection of rules such as these:</p>
 
     <ul>
       <li>For any set <tt>S</tt> and any object <tt>x</tt>,
       <tt>(element-of-set? x (adjoin-set x S))</tt> is true
-      (informally: ``Adjoining an object to a set produces a set
+      (informally: ''Adjoining an object to a set produces a set
       that contains the object'').</li>
 
       <li>For any sets <tt>S</tt> and <tt>T</tt> and any object
       <tt>x</tt>, <tt>(element-of-set? x (union-set S T))</tt> is
       equal to <tt>(or (element-of-set? x S) (element-of-set? x
-      T))</tt> (informally: ``The elements of <tt>(union S T)</tt>
+      T))</tt> (informally: ''The elements of <tt>(union S T)</tt>
       are the elements that are in <tt>S</tt> or in
       <tt>T</tt>'').</li>
 
       <li>For any object <tt>x</tt>, <tt>(element-of-set? x
-      '())</tt> is false (informally: ``No object is an element of
+      '())</tt> is false (informally: ''No object is an element of
       the empty set'').</li>
     </ul>
 
@@ -1844,7 +1844,7 @@
     abstraction. We can regard the procedures <tt>entry</tt>,
     <tt>left-branch</tt>, <tt>right-branch</tt>, and
     <tt>make-tree</tt> as a way of isolating the abstraction of a
-    ``binary tree'' from the particular way we might wish to
+    ''binary tree'' from the particular way we might wish to
     represent such a tree in terms of list structure.</p>
 
     <p><a href="#call_footnote_Temp_250" name="footnote_Temp_250" id="footnote_Temp_250"><sup><small>40</small></sup></a>

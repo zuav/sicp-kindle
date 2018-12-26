@@ -20,7 +20,7 @@
   <h2><a href="book-Z-H-4.html#%_toc_%_sec_2.2">2.2&nbsp;&nbsp;Hierarchical
   Data and the Closure Property</a></h2>
 
-  <p>As we have seen, pairs provide a primitive ``glue'' that we
+  <p>As we have seen, pairs provide a primitive ''glue'' that we
   can use to construct compound data objects. Figure&nbsp;<a href="#%_fig_2.2">2.2</a> shows a standard way to visualize a <a name="%_idx_1526"></a>pair -- in this case, the pair formed by
   <tt>(cons 1 2)</tt>. In this representation, which is called
   <a name="%_idx_1528"></a><em>box-and-pointer notation</em>, each
@@ -207,7 +207,7 @@
   pairs, can be thought of as a sequence of no elements, the
   <a name="%_idx_1594"></a><a name="%_idx_1596"></a><em>empty
   list</em>. The word <em>nil</em> is a contraction of the Latin
-  word <em>nihil</em>, which means ``nothing.''<a href="#footnote_Temp_158" name="call_footnote_Temp_158" id="call_footnote_Temp_158"><sup><small>10</small></sup></a></p>
+  word <em>nihil</em>, which means ''nothing.''<a href="#footnote_Temp_158" name="call_footnote_Temp_158" id="call_footnote_Temp_158"><sup><small>10</small></sup></a></p>
 
   <p><a name="%_sec_Temp_159"></a></p>
 
@@ -217,7 +217,7 @@
   <p><a name="%_idx_1602"></a><a name="%_idx_1604"></a> The use of
   pairs to represent sequences of elements as lists is accompanied
   by conventional programming techniques for manipulating lists by
-  successively <a name="%_idx_1606"></a><a name="%_idx_1608"></a>``<tt>cdr</tt>ing down'' the lists. For example,
+  successively <a name="%_idx_1606"></a><a name="%_idx_1608"></a>''<tt>cdr</tt>ing down'' the lists. For example,
   the procedure <a name="%_idx_1610"></a><tt>list-ref</tt> takes as
   arguments a list and a number <em>n</em> and returns the
   <em>n</em>th item of the list. It is customary to number the
@@ -284,7 +284,7 @@
 
   &nbsp;&nbsp;(length-iter&nbsp;items&nbsp;0))<br /></tt></p>
 
-  <p>Another conventional programming technique is to <a name="%_idx_1628"></a><a name="%_idx_1630"></a>``<tt>cons</tt> up'' an
+  <p>Another conventional programming technique is to <a name="%_idx_1628"></a><a name="%_idx_1630"></a>''<tt>cons</tt> up'' an
   answer list while <tt>cdr</tt>ing down a list, as in the
   procedure <a name="%_idx_1632"></a><a name="%_idx_1634"></a><tt>append</tt>, which takes two lists as
   arguments and combines their elements to make a new list:</p>
@@ -1041,10 +1041,10 @@
   stages, each of which implements part of the program plan, as
   shown in figure&nbsp;<a href="#%_fig_2.7">2.7</a>. In
   <tt>sum-odd-squares</tt>, we begin with an <a name="%_idx_1730"></a><em>enumerator</em>, which generates a
-  ``signal'' consisting of the leaves of a given tree. This signal
+  ''signal'' consisting of the leaves of a given tree. This signal
   is passed through a <a name="%_idx_1732"></a><em>filter</em>,
   which eliminates all but the odd elements. The resulting signal
-  is in turn passed through a <a name="%_idx_1734"></a><em>map</em>, which is a ``transducer'' that
+  is in turn passed through a <a name="%_idx_1734"></a><em>map</em>, which is a ''transducer'' that
   applies the <tt>square</tt> procedure to each element. The output
   of the map is then fed to an <a name="%_idx_1736"></a><em>accumulator</em>, which combines the
   elements using <tt>+</tt>, starting from an initial 0. The plan
@@ -1094,7 +1094,7 @@
 
   <p><a name="%_idx_1738"></a> The key to organizing programs so as
   to more clearly reflect the signal-flow structure is to
-  concentrate on the ``signals'' that flow from one stage in the
+  concentrate on the ''signals'' that flow from one stage in the
   process to the next. If we represent these signals as lists, then
   we can use list operations to implement the processing at each of
   the stages. For instance, we can implement the mapping stages of
@@ -1635,7 +1635,7 @@
     </table>
   </div>
 
-  <p>The <a name="%_idx_1846"></a><a name="%_idx_1848"></a><a name="%_idx_1850"></a>``eight-queens puzzle'' asks how to place eight
+  <p>The <a name="%_idx_1846"></a><a name="%_idx_1848"></a><a name="%_idx_1850"></a>''eight-queens puzzle'' asks how to place eight
   queens on a chessboard so that no queen is in check from any
   other (i.e., no two queens are in the same row, column, or
   diagonal). One possible solution is shown in figure&nbsp;<a href="#%_fig_2.8">2.8</a>. One way to solve the puzzle is to work
@@ -2307,7 +2307,7 @@
   <p>a.&nbsp;&nbsp;The painter that draws the outline of the
   designated frame.</p>
 
-  <p>b.&nbsp;&nbsp;The painter that draws an ``X'' by connecting
+  <p>b.&nbsp;&nbsp;The painter that draws an ''X'' by connecting
   opposite corners of the frame.</p>
 
   <p>c.&nbsp;&nbsp;The painter that draws a diamond shape by
@@ -2556,14 +2556,14 @@
 
   <div class="footnote">
     <p><a href="#call_footnote_Temp_154" name="footnote_Temp_154" id="footnote_Temp_154"><sup><small>6</small></sup></a> The use
-    of the word <a name="%_idx_1536"></a>``closure'' here comes
+    of the word <a name="%_idx_1536"></a>''closure'' here comes
     from abstract algebra, where a set of elements is said to be
     closed under an operation if applying the operation to elements
     in the set produces an element that is again an element of the
     set. The Lisp community also (unfortunately) uses the word
-    ``closure'' to describe a totally unrelated concept: A closure
+    ''closure'' to describe a totally unrelated concept: A closure
     is an implementation technique for representing procedures with
-    free variables. We do not use the word ``closure'' in this
+    free variables. We do not use the word ''closure'' in this
     second sense in this book.</p>
 
     <p><a href="#call_footnote_Temp_155" name="footnote_Temp_155" id="footnote_Temp_155"><sup><small>7</small></sup></a> The
@@ -2583,7 +2583,7 @@
     general-purpose glue that makes it easy to manipulate compound
     data in a uniform way. This limitation lies behind Alan
     <a name="%_idx_1552"></a>Perlis's comment in his foreword to
-    this book: ``In Pascal the plethora of declarable data
+    this book: ''In Pascal the plethora of declarable data
     structures induces a specialization within functions that
     inhibits and penalizes casual cooperation. It is better to have
     100 functions operate on one data structure than to have 10
@@ -2715,7 +2715,7 @@
 
     <p><a href="#call_footnote_Temp_195" name="footnote_Temp_195" id="footnote_Temp_195"><sup><small>19</small></sup></a> We're
     representing a pair here as a list of two elements rather than
-    as a Lisp pair. Thus, the ``pair'' (<em>i</em>,<em>j</em>) is
+    as a Lisp pair. Thus, the ''pair'' (<em>i</em>,<em>j</em>) is
     represented as <tt>(list i j)</tt>, not <tt>(cons i
     j)</tt>.</p>
 
@@ -2732,7 +2732,7 @@
 
     <p><a href="#call_footnote_Temp_202" name="footnote_Temp_202" id="footnote_Temp_202"><sup><small>22</small></sup></a> The
     picture language is based on the language <a name="%_idx_1856"></a>Peter Henderson created to construct images
-    like <a name="%_idx_1858"></a>M.C. Escher's ``Square Limit''
+    like <a name="%_idx_1858"></a>M.C. Escher's ''Square Limit''
     woodcut (see Henderson 1982). The woodcut incorporates a
     repeated scaled pattern, similar to the arrangements drawn
     using the <tt>square-limit</tt> procedure in this section.</p>
@@ -2743,14 +2743,14 @@
     of MIT. A geologist and talented teacher, he taught at William
     and Mary College and at the University of Virginia. In 1859 he
     moved to Boston, where he had more time for research, worked on
-    a plan for establishing a ``polytechnic institute,'' and served
+    a plan for establishing a ''polytechnic institute,'' and served
     as Massachusetts's first State Inspector of Gas Meters.</p>
 
     <p>When MIT was established in 1861, Rogers was elected its
-    first president. Rogers espoused an ideal of ``useful
+    first president. Rogers espoused an ideal of ''useful
     learning'' that was different from the university education of
     the time, with its overemphasis on the classics, which, as he
-    wrote, ``stand in the way of the broader, higher and more
+    wrote, ''stand in the way of the broader, higher and more
     practical instruction and discipline of the natural and social
     sciences.'' This education was likewise to be different from
     narrow trade-school education. In Rogers's words:</p>
@@ -2776,18 +2776,18 @@
     year:</p>
 
     <blockquote>
-      <p>``As I stand here today and see what the Institute is,
+      <p>''As I stand here today and see what the Institute is,
       <tt>...</tt> I call to mind the beginnings of science. I
       remember one hundred and fifty years ago Stephen Hales
       published a pamphlet on the subject of illuminating gas, in
       which he stated that his researches had demonstrated that 128
       grains of bituminous coal -- '' <a name="%_idx_1872"></a></p>
 
-      <p>``Bituminous coal,'' these were his last words on earth.
+      <p>''Bituminous coal,'' these were his last words on earth.
       Here he bent forward, as if consulting some notes on the
       table before him, then slowly regaining an erect position,
       threw up his hands, and was translated from the scene of his
-      earthly labors and triumphs to ``the tomorrow of death,''
+      earthly labors and triumphs to ''the tomorrow of death,''
       where the mysteries of life are solved, and the disembodied
       spirit finds unending satisfaction in contemplating the new
       and still unfathomable mysteries of the infinite future.</p>

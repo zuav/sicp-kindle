@@ -36,7 +36,7 @@
   underlying representation in terms of list structure. A similar
   abstraction barrier isolates the details of the procedures that
   perform rational arithmetic (<tt>add-rat</tt>, <tt>sub-rat</tt>,
-  <tt>mul-rat</tt>, and <tt>div-rat</tt>) from the ``higher-level''
+  <tt>mul-rat</tt>, and <tt>div-rat</tt>) from the ''higher-level''
   procedures that use rational numbers. The resulting program has
   the structure shown in figure&nbsp;<a href="book-Z-H-14.html#%_fig_2.1">2.1</a>.</p>
 
@@ -46,7 +46,7 @@
   designing a large program into smaller tasks that can be
   performed separately. But this kind of data abstraction is not
   yet powerful enough, because it may not always make sense to
-  speak of ``the underlying representation'' for a data object.</p>
+  speak of ''the underlying representation'' for a data object.</p>
 
   <p>For one thing, there might be more than one useful
   representation for a data object, and we might like to design
@@ -89,7 +89,7 @@
   how type tags and data-directed style enable us to design
   separate rectangular and polar representations for complex
   numbers while maintaining the notion of an abstract
-  ``complex-number'' data object. <a name="%_idx_2300"></a><a name="%_idx_2302"></a>We will accomplish this by defining arithmetic
+  ''complex-number'' data object. <a name="%_idx_2300"></a><a name="%_idx_2302"></a>We will accomplish this by defining arithmetic
   procedures for complex numbers (<tt>add-complex</tt>,
   <tt>sub-complex</tt>, <tt>mul-complex</tt>, and
   <tt>div-complex</tt>) in terms of generic selectors that access
@@ -97,10 +97,10 @@
   represented. The resulting complex-number system, as shown in
   figure&nbsp;<a href="#%_fig_2.19">2.19</a>, contains two
   different kinds of <a name="%_idx_2304"></a>abstraction barriers.
-  The ``horizontal'' abstraction barriers play the same role as the
+  The ''horizontal'' abstraction barriers play the same role as the
   ones in figure&nbsp;<a href="book-Z-H-14.html#%_fig_2.1">2.1</a>.
-  They isolate ``higher-level'' operations from ``lower-level''
-  representations. In addition, there is a ``vertical'' barrier
+  They isolate ''higher-level'' operations from ''lower-level''
+  representations. In addition, there is a ''vertical'' barrier
   that gives us the ability to separately design and install
   alternative representations.</p>
 
@@ -127,7 +127,7 @@
   we will show how to use type tags and data-directed style to
   develop a generic arithmetic package. This provides procedures
   (<tt>add</tt>, <tt>mul</tt>, and so on) that can be used to
-  manipulate all sorts of ``numbers'' and can be easily extended
+  manipulate all sorts of ''numbers'' and can be easily extended
   when a new kind of number is needed. In section&nbsp;<a href="book-Z-H-18.html#%_sec_2.5.3">2.5.3</a>, we'll show how to use
   generic arithmetic in a system that performs symbolic
   algebra.</p>
@@ -150,7 +150,7 @@
   <p>Like rational numbers, complex numbers are naturally
   represented as ordered pairs. The set of complex numbers can be
   thought of as a two-dimensional space with two orthogonal axes,
-  the ``real'' axis and the ``imaginary'' axis. (See
+  the ''real'' axis and the ''imaginary'' axis. (See
   figure&nbsp;<a href="#%_fig_2.20">2.20</a>.) From this point of
   view, the complex number <em>z</em> = <em>x</em> +
   <em>i</em><em>y</em> (where <em>i</em><sup>2</sup> = - 1) can be
@@ -231,7 +231,7 @@
   <p>produce complex numbers that are equal to <tt>z</tt>.</p>
 
   <p>Using these constructors and selectors, we can implement
-  arithmetic on complex numbers using the ``abstract data''
+  arithmetic on complex numbers using the ''abstract data''
   specified by the constructors and selectors, just as we did for
   rational numbers in section&nbsp;<a href="book-Z-H-14.html#%_sec_2.1.1">2.1.1</a>. As shown in the
   formulas above, we can add and subtract complex numbers in terms
@@ -263,8 +263,8 @@
   representation and we must implement the constructors and
   selectors in terms of primitive numbers and primitive list
   structure. There are two obvious ways to do this: We can
-  represent a complex number in ``rectangular form'' as a pair
-  (real part, imaginary part) or in ``polar form'' as a pair
+  represent a complex number in ''rectangular form'' as a pair
+  (real part, imaginary part) or in ''polar form'' as a pair
   (magnitude, angle). Which shall we choose?</p>
 
   <p>In order to make the different choices concrete, imagine that
@@ -341,7 +341,7 @@
   data</a></h3>
 
   <p><a name="%_idx_2356"></a><a name="%_idx_2358"></a><a name="%_idx_2360"></a> One way to view data abstraction is as an
-  application of the <a name="%_idx_2362"></a><a name="%_idx_2364"></a>``principle of least commitment.'' In
+  application of the <a name="%_idx_2362"></a><a name="%_idx_2364"></a>''principle of least commitment.'' In
   implementing the complex-number system in section&nbsp;<a href="#%_sec_2.4.1">2.4.1</a>, we can use either Ben's rectangular
   representation or Alyssa's polar representation. The abstraction
   barrier formed by the selectors and constructors permits us to
@@ -814,7 +814,7 @@
   conflict.</p>
 
   <p>The complex-arithmetic selectors access the table by means of
-  a general ``operation'' procedure called <tt>apply-generic</tt>,
+  a general ''operation'' procedure called <tt>apply-generic</tt>,
   which applies a generic operation to some arguments.
   <tt>Apply-generic</tt> looks in the table under the name of the
   operation and the types of the arguments and applies the
@@ -901,7 +901,7 @@
 
   <p>We can regard this program as performing a dispatch on the
   type of the expression to be differentiated. In this situation
-  the ``type tag'' of the datum is the algebraic operator symbol
+  the ''type tag'' of the datum is the algebraic operator symbol
   (such as <tt>+</tt>) and the operation being performed is
   <tt>deriv</tt>. We can transform this program into data-directed
   style by rewriting the basic derivative procedure as</p>
@@ -1006,9 +1006,9 @@
   the table.</p>
 
   <p>An alternative implementation strategy is to decompose the
-  table into columns and, instead of using ``intelligent
+  table into columns and, instead of using ''intelligent
   operations'' that dispatch on data types, to work with
-  ``intelligent data objects'' that dispatch on operation names. We
+  ''intelligent data objects'' that dispatch on operation names. We
   can do this by arranging things so that a data object, such as a
   rectangular number, is represented as a procedure that takes as
   input the required operation name and performs the operation
@@ -1049,7 +1049,7 @@
 
   <p>This style of programming is called <em>message passing</em>.
   The name comes from the image that a data object is an entity
-  that receives the requested operation name as a ``message.'' We
+  that receives the requested operation name as a ''message.'' We
   have already seen an example of message passing in
   section&nbsp;<a href="book-Z-H-14.html#%_sec_2.1.3">2.1.3</a>,
   where we saw how <tt>cons</tt>, <tt>car</tt>, and <tt>cdr</tt>

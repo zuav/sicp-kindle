@@ -808,7 +808,7 @@
   non-derived expressions?</p>
 
   <p><a name="%_thm_4.8"></a> <b>Exercise
-  4.8.</b>&nbsp;&nbsp;<a name="%_idx_4414"></a><a name="%_idx_4416"></a><a name="%_idx_4418"></a><a name="%_idx_4420"></a>``Named <tt>let</tt>'' is a variant of
+  4.8.</b>&nbsp;&nbsp;<a name="%_idx_4414"></a><a name="%_idx_4416"></a><a name="%_idx_4418"></a><a name="%_idx_4420"></a>''Named <tt>let</tt>'' is a variant of
   <tt>let</tt> that has the form</p>
 
   <p>
@@ -1017,7 +1017,7 @@
   return the corresponding element in the list of values. If we do
   not find the variable in the current frame, we search the
   enclosing environment, and so on. If we reach the empty
-  environment, we signal an ``unbound variable'' error.</p>
+  environment, we signal an ''unbound variable'' error.</p>
 
   <p><tt><a name="%_idx_4480"></a>(define&nbsp;(lookup-variable-value&nbsp;var&nbsp;env)<br />
 
@@ -1438,7 +1438,7 @@
   <p><a name="%_thm_4.15"></a> <b>Exercise
   4.15.</b>&nbsp;&nbsp;<a name="%_idx_4588"></a>Given a
   one-argument procedure <tt>p</tt> and an object <tt>a</tt>,
-  <tt>p</tt> is said to ``halt'' on <tt>a</tt> if evaluating the
+  <tt>p</tt> is said to ''halt'' on <tt>a</tt> if evaluating the
   expression <tt>(p a)</tt> returns a value (as opposed to
   terminating with an error message or running forever). Show that
   it is impossible to write a procedure <tt>halts?</tt> that
@@ -1507,7 +1507,7 @@
   procedure body in which the <tt>define</tt> is evaluated.</p>
 
   <p>As it happens, our interpreter will evaluate calls to
-  <tt>f</tt> correctly, but for an ``accidental'' reason: Since the
+  <tt>f</tt> correctly, but for an ''accidental'' reason: Since the
   definitions of the internal procedures come first, no calls to
   these procedures will be evaluated until all of them have been
   defined. Hence, <tt>odd?</tt> will have been defined by the time
@@ -1527,7 +1527,7 @@
   environment before evaluating any of the value expressions. One
   way to do this is by a syntax transformation on <tt>lambda</tt>
   expressions. Before evaluating the body of a <tt>lambda</tt>
-  expression, we <a name="%_idx_4606"></a><a name="%_idx_4608"></a>``scan out'' and eliminate all the internal
+  expression, we <a name="%_idx_4606"></a><a name="%_idx_4608"></a>''scan out'' and eliminate all the internal
   definitions in the body. The internally defined variables will be
   created with a <tt>let</tt> and then set to their values by
   assignment. For example, the procedure</p>
@@ -1586,7 +1586,7 @@
   there an extra frame in the transformed program? Explain why this
   difference in environment structure can never make a difference
   in the behavior of a correct program. Design a way to make the
-  interpreter implement the ``simultaneous'' scope rule for
+  interpreter implement the ''simultaneous'' scope rule for
   internal definitions without constructing the extra frame.</p>
 
   <p><a name="%_thm_4.18"></a> <b>Exercise
@@ -2266,7 +2266,7 @@
     machine described as a C program. Similarly, writing a Lisp
     evaluator in C produces a C program that can execute any Lisp
     program. The deep idea here is that any evaluator can emulate
-    any other. Thus, the notion of ``what can in principle be
+    any other. Thus, the notion of ''what can in principle be
     computed'' (ignoring practicalities of time and memory
     required) is independent of the language or the computer, and
     instead reflects an underlying notion of <a name="%_idx_4554"></a><em>computability</em>. This was first
@@ -2275,7 +2275,7 @@
     theoretical <a name="%_idx_4558"></a>computer science. In the
     paper, Turing presented a simple computational model -- now
     known as a <a name="%_idx_4560"></a><em>Turing machine</em> --
-    and argued that any ``effective process'' can be formulated as
+    and argued that any ''effective process'' can be formulated as
     a program for such a machine. (This argument is known as the
     <a name="%_idx_4562"></a><em>Church-Turing thesis</em>.) Turing
     then implemented a universal machine, i.e., a Turing machine
@@ -2283,7 +2283,7 @@
     used this framework to demonstrate that there are well-posed
     problems that cannot be computed by Turing machines (see
     exercise&nbsp;<a href="#%_thm_4.15">4.15</a>), and so by
-    implication cannot be formulated as ``effective processes.''
+    implication cannot be formulated as ''effective processes.''
     Turing went on to make fundamental contributions to practical
     computer science as well. For example, he invented the idea of
     <a name="%_idx_4564"></a>structuring programs using
@@ -2333,14 +2333,14 @@
 
     <p><a href="#call_footnote_Temp_559" name="footnote_Temp_559" id="footnote_Temp_559"><sup><small>24</small></sup></a> Wanting
     programs to not depend on this evaluation mechanism is the
-    reason for the ``management is not responsible'' remark in
+    reason for the ''management is not responsible'' remark in
     footnote&nbsp;<a href="book-Z-H-10.html#footnote_Temp_45">28</a> of chapter&nbsp;1.
     By insisting that internal definitions come first and do not
     use each other while the definitions are being evaluated, the
     IEEE standard for Scheme leaves implementors some choice in the
     mechanism used to evaluate these definitions. The choice of one
     evaluation rule rather than another here may seem like a small
-    issue, affecting only the interpretation of ``badly formed''
+    issue, affecting only the interpretation of ''badly formed''
     programs. However, we will see in section&nbsp;<a href="book-Z-H-35.html#%_sec_5.5.6">5.5.6</a> that moving to a model
     of simultaneous scoping for internal definitions avoids some
     nasty difficulties that would otherwise arise in implementing a
@@ -2369,7 +2369,7 @@
     recursive procedures without using <tt>define</tt>. The
     <a name="%_idx_4628"></a>most general trick of this sort is the
     <em>Y</em> <em>operator</em>, which can be used to give a
-    ``pure <img src="book-Z-G-D-6.gif" border="0" />-calculus''
+    ''pure <img src="book-Z-G-D-6.gif" border="0" />-calculus''
     implementation of <a name="%_idx_4630"></a><a name="%_idx_4632"></a>recursion. (See Stoy 1977 for details on the
     lambda calculus, and Gabriel 1988 for an exposition of the
     <em>Y</em> operator in Scheme.)</p>

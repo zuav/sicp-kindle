@@ -187,7 +187,7 @@
   implement such variable access in section&nbsp;<a href="#%_sec_5.5.6">5.5.6</a>. Until then, however, we will focus on
   the kind of register and stack optimizations described above.
   There are many other optimizations that can be performed by a
-  compiler, such as coding primitive operations ``in line'' instead
+  compiler, such as coding primitive operations ''in line'' instead
   of using a general <tt>apply</tt> mechanism (see
   exercise&nbsp;<a href="#%_thm_5.38">5.38</a>); but we will not
   emphasize these here. Our main goal in this section is to
@@ -1212,7 +1212,7 @@
   result is put directly into the target register and there is no
   need to return to a special location that copies it. Instead, we
   simplify the code by setting up <tt>continue</tt> so that the
-  procedure will ``return'' directly to the place specified by the
+  procedure will ''return'' directly to the place specified by the
   caller's linkage:</p>
 
   <p>
@@ -1501,7 +1501,7 @@
   <p>Another sequence combiner,
   <tt>tack-on-instruction-sequence</tt>, is used by
   <tt>compile-lambda</tt> to append a procedure body to another
-  sequence. Because the procedure body is not ``in line'' to be
+  sequence. Because the procedure body is not ''in line'' to be
   executed as part of the combined sequence, its register use has
   no impact on the register use of the sequence in which it is
   embedded. We thus ignore the procedure body's sets of needed and
@@ -2383,7 +2383,7 @@
 
   <p><a name="%_thm_5.43"></a> <b>Exercise
   5.43.</b>&nbsp;&nbsp;<a name="%_idx_6454"></a><a name="%_idx_6456"></a>We argued in section&nbsp;<a href="book-Z-H-26.html#%_sec_4.1.6">4.1.6</a> that internal
-  definitions for block structure should not be considered ``real''
+  definitions for block structure should not be considered ''real''
   <tt>define</tt>s. Rather, a procedure body should be interpreted
   as if the internal variables being defined were installed as
   ordinary <tt>lambda</tt> variables initialized to their correct
@@ -2738,7 +2738,7 @@
   executes the resulting code, and prints the result. This is easy
   to run in our simulated setup, since we can arrange to call the
   procedures <tt>compile</tt> and <tt>assemble</tt> as
-  ``register-machine operations.''</p>
+  ''register-machine operations.''</p>
 
   <p><a name="%_thm_5.50"></a> <b>Exercise
   5.50.</b>&nbsp;&nbsp;<a name="%_idx_6516"></a>Use the compiler to
@@ -2947,7 +2947,7 @@
     course, compiled procedures as well as interpreted procedures
     are compound (nonprimitive). For compatibility with the
     terminology used in the explicit-control evaluator, in this
-    section we will use ``compound'' to mean interpreted (as
+    section we will use ''compound'' to mean interpreted (as
     opposed to compiled).</p>
 
     <p><a href="#call_footnote_Temp_834" name="footnote_Temp_834" id="footnote_Temp_834"><sup><small>49</small></sup></a> Now
@@ -3011,7 +3011,7 @@
     provide error checking. Unfortunately, people often neglect to
     do this, even in critical applications where speed is not a
     constraint. Their programs lead fast and dangerous lives. For
-    example, the notorious <a name="%_idx_6498"></a>``Worm'' that
+    example, the notorious <a name="%_idx_6498"></a>''Worm'' that
     paralyzed the Internet in 1988 exploited the <a name="%_idx_6500"></a>UNIX <sup><em>T</em><em>M</em></sup> operating
     system's failure to check whether the input buffer has <a name="%_idx_6502"></a>overflowed in the finger daemon. (See Spafford
     1989.)</p>
@@ -3020,7 +3020,7 @@
     course, with either the interpretation or the compilation
     strategy we must also implement for the new machine storage
     allocation, input and output, and all the various operations
-    that we took as ``primitive'' in our discussion of the
+    that we took as ''primitive'' in our discussion of the
     evaluator and compiler. One strategy for minimizing work here
     is to write as many of these operations as possible in Lisp and
     then compile them for the new machine. Ultimately, everything

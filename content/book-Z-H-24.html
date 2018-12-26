@@ -229,7 +229,7 @@
   <tt>delay</tt>. Evaluating <tt>(delay &lt;<em>exp</em>&gt;)</tt>
   does not evaluate the expression &lt;<em>exp</em>&gt;, but rather
   returns a so-called <a name="%_idx_3772"></a><em>delayed
-  object</em>, which we can think of as a ``promise'' to evaluate
+  object</em>, which we can think of as a ''promise'' to evaluate
   &lt;<em>exp</em>&gt; at some future time. As a companion to
   <tt>delay</tt>, there is a procedure called <a name="%_idx_3774"></a><tt>force</tt> that takes a delayed object as
   argument and performs the evaluation -- in effect, forcing the
@@ -272,7 +272,7 @@
   implementation in action</a></h4>
 
   <p>To see how this implementation behaves, let us analyze the
-  ``outrageous'' prime computation we saw above, reformulated in
+  ''outrageous'' prime computation we saw above, reformulated in
   terms of streams:</p>
 
   <p><tt>(stream-car<br />
@@ -392,11 +392,11 @@
   enumerated only as far as was necessary to feed the prime
   filter.</p>
 
-  <p>In general, we can think of delayed evaluation as <a name="%_idx_3792"></a>``demand-driven'' programming, whereby each
+  <p>In general, we can think of delayed evaluation as <a name="%_idx_3792"></a>''demand-driven'' programming, whereby each
   stage in the stream process is activated only enough to satisfy
   the next stage. What we have done is to <a name="%_idx_3794"></a>decouple the actual order of events in the
   computation from the apparent structure of our procedures. We
-  write procedures as if the streams existed ``all at once'' when,
+  write procedures as if the streams existed ''all at once'' when,
   in reality, the computation is performed incrementally, as in
   traditional programming styles.</p>
 
@@ -633,8 +633,8 @@
   <i>233</i><br /></tt></p>
 
   <p>It is interesting to contemplate the signal-processing system
-  set up by <tt>sieve</tt>, shown in the <a name="%_idx_3856"></a>``Henderson diagram'' in figure&nbsp;<a href="#%_fig_3.31">3.31</a>.<a href="#footnote_Temp_456" name="call_footnote_Temp_456" id="call_footnote_Temp_456"><sup><small>61</small></sup></a> The
-  input stream feeds into an ``un<tt>cons</tt>er'' that separates
+  set up by <tt>sieve</tt>, shown in the <a name="%_idx_3856"></a>''Henderson diagram'' in figure&nbsp;<a href="#%_fig_3.31">3.31</a>.<a href="#footnote_Temp_456" name="call_footnote_Temp_456" id="call_footnote_Temp_456"><sup><small>61</small></sup></a> The
+  input stream feeds into an ''un<tt>cons</tt>er'' that separates
   the first element of the stream from the rest of the stream. The
   first element is used to construct a divisibility filter, through
   which the rest is passed, and the output of the filter is fed to
@@ -670,7 +670,7 @@
 
   <p><a name="%_idx_3860"></a> The <tt>integers</tt> and
   <tt>fibs</tt> streams above were defined by specifying
-  ``generating'' procedures that explicitly compute the stream
+  ''generating'' procedures that explicitly compute the stream
   elements one by one. An alternative way to specify streams is to
   take advantage of delayed evaluation to define streams
   implicitly. For example, the following expression defines the
@@ -1114,7 +1114,7 @@
 
   <p><a name="%_idx_3944"></a> In section&nbsp;<a href="book-Z-H-11.html#%_sec_1.2.1">1.2.1</a>, we introduced iterative
   processes, which proceed by updating state variables. We know now
-  that we can represent state as a ``timeless'' stream of values
+  that we can represent state as a ''timeless'' stream of values
   rather than as a set of variables to be updated. Let's adopt this
   perspective in revisiting the square-root procedure from
   section&nbsp;<a href="book-Z-H-10.html#%_sec_1.1.7">1.1.7</a>.
@@ -1263,7 +1263,7 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(make-tableau&nbsp;transform&nbsp;s)))<br />
   </tt></p>
 
-  <p>We can demonstrate this kind of ``super-acceleration'' of the
+  <p>We can demonstrate this kind of ''super-acceleration'' of the
   <img src="book-Z-G-D-9.gif" border="0" /> sequence:</p>
 
   <p>
@@ -1346,7 +1346,7 @@
   paradigm handles traditional nested loops as processes defined on
   sequences of pairs. If we generalize this technique to infinite
   streams, then we can write programs that are not easily
-  represented as loops, because the ``looping'' must range over an
+  represented as loops, because the ''looping'' must range over an
   infinite set.</p>
 
   <p><a name="%_idx_3990"></a>For example, suppose we want to
@@ -1527,8 +1527,8 @@
   the order that results from an <em>ad hoc</em> interleaving
   process. We can use a technique similar to the <tt>merge</tt>
   procedure of exercise&nbsp;<a href="#%_thm_3.56">3.56</a>, if we
-  define a way to say that one pair of integers is ``less than''
-  another. One way to do this is to define a ``weighting function''
+  define a way to say that one pair of integers is ''less than''
+  another. One way to do this is to define a ''weighting function''
   <em>W</em>(<em>i</em>,<em>j</em>) and stipulate that
   (<em>i</em><sub>1</sub>,<em>j</em><sub>1</sub>) is less than
   (<em>i</em><sub>2</sub>,<em>j</em><sub>2</sub>) if
@@ -1583,7 +1583,7 @@
 
   <p><a name="%_idx_4018"></a><a name="%_idx_4020"></a> We began
   our discussion of streams by describing them as computational
-  analogs of the ``signals'' in signal-processing systems. In fact,
+  analogs of the ''signals'' in signal-processing systems. In fact,
   we can use streams to model signal-processing systems in a very
   direct way, representing the values of a signal at successive
   time intervals as consecutive elements of a stream. For instance,
@@ -1597,7 +1597,7 @@
 
   <p>and returns the stream of values <em>S</em> =
   (<em>S</em><sub><em>i</em></sub>). The following
-  <tt>integral</tt> procedure is reminiscent of the ``implicit
+  <tt>integral</tt> procedure is reminiscent of the ''implicit
   style'' definition of the stream of integers
   (section&nbsp;<a href="#%_sec_3.5.2">3.5.2</a>):</p>
 
@@ -1817,7 +1817,7 @@
   produced. This would outlaw loops.</p>
 
   <p>Unfortunately, stream models of systems with loops may require
-  uses of <tt>delay</tt> beyond the ``hidden'' <tt>delay</tt>
+  uses of <tt>delay</tt> beyond the ''hidden'' <tt>delay</tt>
   supplied by <tt>cons-stream</tt>. For instance,
   figure&nbsp;<a href="#%_fig_3.34">3.34</a> shows a
   signal-processing system for solving the <a name="%_idx_4062"></a>differential equation
@@ -1832,7 +1832,7 @@
 
   <div align="left">
     <div align="left">
-      <b>Figure 3.34:</b>&nbsp;&nbsp;An ``analog computer circuit''
+      <b>Figure 3.34:</b>&nbsp;&nbsp;An ''analog computer circuit''
       that solves the equation
       <em>d</em><em>y</em>/<em>d</em><em>t</em> =
       <em>f</em>(<em>y</em>).
@@ -1921,7 +1921,7 @@
 
   <p><a name="%_thm_3.77"></a> <b>Exercise 3.77.</b>&nbsp;&nbsp;The
   <tt>integral</tt> procedure used above was analogous to the
-  ``implicit'' definition of the infinite stream of integers in
+  ''implicit'' definition of the infinite stream of integers in
   section&nbsp;<a href="#%_sec_3.5.2">3.5.2</a>. Alternatively, we
   can give a definition of <tt>integral</tt> that is more like
   <tt>integers-starting-from</tt> (also in section&nbsp;<a href="#%_sec_3.5.2">3.5.2</a>):</p>
@@ -2125,7 +2125,7 @@
   in section&nbsp;<a href="book-Z-H-20.html#%_sec_3.1.2">3.1.2</a>,
   one of the major benefits of introducing assignment is that we
   can increase the modularity of our systems by encapsulating, or
-  ``hiding,'' parts of the state of a large system within local
+  ''hiding,'' parts of the state of a large system within local
   variables. Stream models can provide an equivalent modularity
   without the use of assignment. As an <a name="%_idx_4120"></a><a name="%_idx_4122"></a>illustration, we can
   reimplement the Monte Carlo estimation of <img src="book-Z-G-D-9.gif" border="0" />, which we examined in
@@ -2210,7 +2210,7 @@
   <p><a name="%_thm_3.81"></a> <b>Exercise
   3.81.</b>&nbsp;&nbsp;<a name="%_idx_4136"></a>Exercise&nbsp;<a href="book-Z-H-20.html#%_thm_3.6">3.6</a> discussed generalizing the
   random-number generator to allow one to reset the random-number
-  sequence so as to produce repeatable sequences of ``random''
+  sequence so as to produce repeatable sequences of ''random''
   numbers. Produce a stream formulation of this same generator that
   operates on an input stream of requests to <tt>generate</tt> a
   new random number or to <tt>reset</tt> the sequence to a
@@ -2252,7 +2252,7 @@
   evaluation.</p>
 
   <p>In order to contrast these two approaches to modeling, let us
-  reconsider the implementation of a ``withdrawal processor'' that
+  reconsider the implementation of a ''withdrawal processor'' that
   <a name="%_idx_4148"></a>monitors the balance in a bank account.
   In section&nbsp;<a href="book-Z-H-20.html#%_sec_3.1.3">3.1.3</a>
   we implemented a simplified version of such a processor:</p>
@@ -2320,7 +2320,7 @@
   local state variables, and we model the changes of state with
   assignments to those variables. By doing this we make the time of
   execution of a computation model time in the world that we are
-  part of, and thus we get ``objects'' in our computer.</p>
+  part of, and thus we get ''objects'' in our computer.</p>
 
   <p>Modeling with objects is powerful and intuitive, largely
   because this matches the perception of interacting with a world
@@ -2345,7 +2345,7 @@
   we would model the fact that Peter and Paul share an account by
   having both Peter and Paul send their transaction requests to the
   same bank-account object, as we saw in section&nbsp;<a href="book-Z-H-20.html#%_sec_3.1.3">3.1.3</a>. From the stream point
-  of view, where there are no ``objects'' <em>per se</em>, we have
+  of view, where there are no ''objects'' <em>per se</em>, we have
   already indicated that a bank account can be modeled as a process
   that operates on a stream of transaction requests to produce a
   stream of responses. Accordingly, we could model the fact that
@@ -2380,7 +2380,7 @@
   very rarely. We could hardly force Peter to wait for Paul to
   access the account before he could issue a second transaction.
   However such a merge is implemented, it must interleave the two
-  transaction streams in some way that is constrained by ``real
+  transaction streams in some way that is constrained by ''real
   time'' as perceived by Peter and Paul, in the sense that, if
   Peter and Paul meet, they can agree that certain transactions
   were processed before the meeting, and other transactions were
@@ -2388,7 +2388,7 @@
   precisely the same constraint that we had to deal with in
   section&nbsp;<a href="book-Z-H-23.html#%_sec_3.4.1">3.4.1</a>,
   where we found the need to introduce explicit synchronization to
-  ensure a ``correct'' order of events in concurrent processing of
+  ensure a ''correct'' order of events in concurrent processing of
   objects with state. Thus, in an attempt to support the functional
   style, the need to merge inputs from different agents
   reintroduces the same problems that the functional style was
@@ -2409,7 +2409,7 @@
   <div class="footnote">
     <p><a href="#call_footnote_Temp_442" name="footnote_Temp_442" id="footnote_Temp_442"><sup><small>52</small></sup></a>
     Physicists sometimes adopt this view by introducing the
-    <a name="%_idx_3728"></a>``world lines'' of particles as a
+    <a name="%_idx_3728"></a>''world lines'' of particles as a
     device for reasoning about motion. We've also already mentioned
     (section&nbsp;<a href="book-Z-H-15.html#%_sec_2.2.3">2.2.3</a>)
     that this is the natural way to think about signal-processing
@@ -2490,7 +2490,7 @@
     of the circumference of the Earth, which he computed by
     observing shadows cast at noon on the day of the summer
     solstice. Eratosthenes's sieve method, although ancient, has
-    formed the basis for special-purpose hardware ``sieves'' that,
+    formed the basis for special-purpose hardware ''sieves'' that,
     until recently, were the most powerful tools in existence for
     locating large primes. Since the 70s, however, these methods
     have been superseded by outgrowths of the <a name="%_idx_3850"></a>probabilistic techniques discussed in
@@ -2570,7 +2570,7 @@
     column of the array of pairs.</p>
 
     <p><a href="#call_footnote_Temp_487" name="footnote_Temp_487" id="footnote_Temp_487"><sup><small>70</small></sup></a> To
-    quote from G. H. Hardy's obituary of <a name="%_idx_4012"></a><a name="%_idx_4014"></a><a name="%_idx_4016"></a>Ramanujan (Hardy 1921): ``It was Mr.
+    quote from G. H. Hardy's obituary of <a name="%_idx_4012"></a><a name="%_idx_4014"></a><a name="%_idx_4016"></a>Ramanujan (Hardy 1921): ''It was Mr.
     Littlewood (I believe) who remarked that `every positive
     integer was one of his friends.' I remember once going to see
     him when he was lying ill at Putney. I had ridden in taxi-cab
@@ -2595,16 +2595,16 @@
     procedures. In such languages, the programmer must specify the
     data types of the arguments and the result of each procedure:
     number, logical value, sequence, and so on. Consequently, we
-    could not express an abstraction such as ``map a given
+    could not express an abstraction such as ''map a given
     procedure <tt>proc</tt> over all the elements in a sequence''
     by a single higher-order procedure such as <tt>stream-map</tt>.
     Rather, we would need a different mapping procedure for each
     different combination of argument and result data types that
     might be specified for a <tt>proc</tt>. Maintaining a practical
-    notion of ``data type'' in the presence of higher-order
+    notion of ''data type'' in the presence of higher-order
     procedures raises many difficult issues. One way of dealing
     with this problem is illustrated by the language ML <a name="%_idx_4106"></a><a name="%_idx_4108"></a><a name="%_idx_4110"></a><a name="%_idx_4112"></a>(Gordon, Milner, and
-    Wadsworth 1979), whose ``polymorphic data types'' include
+    Wadsworth 1979), whose ''polymorphic data types'' include
     templates for higher-order transformations between data types.
     Moreover, data types for most procedures in ML are never
     explicitly declared by the programmer. Instead, ML includes a
@@ -2628,7 +2628,7 @@
     <p><a href="#call_footnote_Temp_506" name="footnote_Temp_506" id="footnote_Temp_506"><sup><small>75</small></sup></a> Observe
     that, for any two streams, there is in general more than one
     <a name="%_idx_4180"></a><a name="%_idx_4182"></a>acceptable
-    order of interleaving. Thus, technically, ``merge'' is a
+    order of interleaving. Thus, technically, ''merge'' is a
     relation rather than a function -- the answer is not a
     deterministic function of the inputs. We already mentioned
     (footnote&nbsp;<a href="book-Z-H-23.html#footnote_Temp_411">39</a>) that
@@ -2640,7 +2640,7 @@
     <p><a href="#call_footnote_Temp_507" name="footnote_Temp_507" id="footnote_Temp_507"><sup><small>76</small></sup></a> The
     object model approximates the world by dividing it into
     separate pieces. The functional model does not modularize along
-    object boundaries. The object model is useful when <a name="%_idx_4184"></a>the unshared state of the ``objects'' is much
+    object boundaries. The object model is useful when <a name="%_idx_4184"></a>the unshared state of the ''objects'' is much
     larger than the state that they share. An example of a place
     where the object viewpoint fails is <a name="%_idx_4186"></a>quantum mechanics, where thinking of things as
     individual particles leads to paradoxes and confusions.

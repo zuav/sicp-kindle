@@ -263,7 +263,7 @@
   can safely allow Paul's deposit and Peter's withdrawal to happen
   concurrently, because the net result will be the same as if the
   two operations had happened sequentially. Second, there may be
-  more than one possible ``correct'' result produced by a
+  more than one possible ''correct'' result produced by a
   concurrent program, because we require only that the result be
   the same as for <em>some</em> sequential order. For example,
   suppose that Peter and Paul's joint account starts out with $100,
@@ -1037,7 +1037,7 @@
   access shared state, and we've seen how to achieve this control
   through judicious use of serializers. But the problems of
   concurrency lie deeper than this, because, from a fundamental
-  point of view, it's not always clear what is meant by ``shared
+  point of view, it's not always clear what is meant by ''shared
   state.''</p>
 
   <p>Mechanisms such as <tt>test-and-set!</tt> require processes to
@@ -1054,7 +1054,7 @@
   distributed systems. For instance, imagine a distributed banking
   system where individual branch banks maintain local values for
   bank balances and periodically compare these with values
-  maintained by other branches. In such a system the value of ``the
+  maintained by other branches. In such a system the value of ''the
   account balance'' would be undetermined, except right after
   synchronization. If Peter deposits money in an account he holds
   jointly with Paul, when should we say that the account balance
@@ -1062,10 +1062,10 @@
   not until after the synchronization? And if Paul accesses the
   account from a different branch, what are the reasonable
   constraints to place on the banking system such that the behavior
-  is ``correct''? The only thing that might matter for correctness
+  is ''correct''? The only thing that might matter for correctness
   is the behavior observed by Peter and Paul individually and the
-  ``state'' of the account immediately after synchronization.
-  Questions about the ``real'' account balance or the order of
+  ''state'' of the account immediately after synchronization.
+  Questions about the ''real'' account balance or the order of
   events between synchronizations may be irrelevant or
   meaningless.<a href="#footnote_Temp_440" name="call_footnote_Temp_440" id="call_footnote_Temp_440"><sup><small>50</small></sup></a></p>
 
@@ -1096,7 +1096,7 @@
     sequential program.</p>
 
     <p><a href="#call_footnote_Temp_406" name="footnote_Temp_406" id="footnote_Temp_406"><sup><small>35</small></sup></a> To
-    quote some graffiti seen on a Cambridge <a name="%_idx_3586"></a>building wall: ``Time is a device that was
+    quote some graffiti seen on a Cambridge <a name="%_idx_3586"></a>building wall: ''Time is a device that was
     invented to keep everything from happening at once.''</p>
 
     <p><a href="#call_footnote_Temp_407" name="footnote_Temp_407" id="footnote_Temp_407"><sup><small>36</small></sup></a> An even
@@ -1112,7 +1112,7 @@
     elaborate <a name="%_idx_3594"></a><em>cache-coherence</em>
     protocols are required to ensure that the various processors
     will maintain a consistent view of memory contents, despite the
-    fact that data may be replicated (``cached'') among the
+    fact that data may be replicated (''cached'') among the
     different processors to increase the speed of memory
     access.</p>
 
@@ -1163,12 +1163,12 @@
     by the account.</p>
 
     <p><a href="#call_footnote_Temp_428" name="footnote_Temp_428" id="footnote_Temp_428"><sup><small>44</small></sup></a> The
-    term ``mutex'' is an abbreviation for <a name="%_idx_3646"></a><em>mutual exclusion</em>. The general problem
+    term ''mutex'' is an abbreviation for <a name="%_idx_3646"></a><em>mutual exclusion</em>. The general problem
     of arranging a mechanism that permits concurrent processes to
     safely share resources is called the mutual exclusion problem.
     Our mutex is a simple variant of the <a name="%_idx_3648"></a><em>semaphore</em> mechanism (see
     exercise&nbsp;<a href="#%_thm_3.47">3.47</a>), which was
-    introduced in the <a name="%_idx_3650"></a>``THE''
+    introduced in the <a name="%_idx_3650"></a>''THE''
     Multiprogramming System developed at the <a name="%_idx_3652"></a>Technological University of Eindhoven and
     named for the university's initials in Dutch (Dijkstra 1968a).
     The acquire and release operations were originally called
@@ -1181,7 +1181,7 @@
     problems.</p>
 
     <p><a href="#call_footnote_Temp_429" name="footnote_Temp_429" id="footnote_Temp_429"><sup><small>45</small></sup></a> In most
-    time-shared operating systems, processes that are <a name="%_idx_3664"></a>blocked by a mutex do <a name="%_idx_3666"></a>not waste time ``busy-waiting'' as above.
+    time-shared operating systems, processes that are <a name="%_idx_3664"></a>blocked by a mutex do <a name="%_idx_3666"></a>not waste time ''busy-waiting'' as above.
     Instead, the system schedules another process to run while the
     first is waiting, and the blocked process is awakened when the
     mutex becomes available.</p>
@@ -1231,7 +1231,7 @@
     order is due to <a name="%_idx_3702"></a><a name="%_idx_3704"></a><a name="%_idx_3706"></a>Havender (1968).
     Situations where deadlock cannot be avoided require
     <em>deadlock-recovery</em> methods, which entail having
-    processes ``back out'' of the deadlocked state and try again.
+    processes ''back out'' of the deadlocked state and try again.
     Deadlock-recovery mechanisms are widely used in database
     management systems, a topic that is treated in detail in Gray
     and Reuter 1993.</p>
@@ -1240,7 +1240,7 @@
     such alternative to serialization is called <a name="%_idx_3710"></a><em>barrier synchronization</em>. The
     programmer permits concurrent processes to execute as they
     please, but establishes certain synchronization points
-    (``barriers'') through which no process can proceed until all
+    (''barriers'') through which no process can proceed until all
     the processes have reached the barrier. Modern processors
     provide machine instructions that permit programmers to
     establish synchronization points at places where consistency is
@@ -1258,7 +1258,7 @@
 
     <p><a href="#call_footnote_Temp_441" name="footnote_Temp_441" id="footnote_Temp_441"><sup><small>51</small></sup></a> For
     distributed systems, this perspective was pursued by <a name="%_idx_3722"></a>Lamport (1978), who showed how to use
-    communication to establish ``global clocks'' that can be used
+    communication to establish ''global clocks'' that can be used
     to establish orderings on events in distributed systems.</p>
   </div>
 

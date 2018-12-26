@@ -37,10 +37,10 @@
 
   <p>The basic idea of data abstraction is to structure the
   programs that are to use compound data objects so that they
-  operate on <a name="%_idx_1282"></a><a name="%_idx_1284"></a>``abstract data.'' That is, our programs should
+  operate on <a name="%_idx_1282"></a><a name="%_idx_1284"></a>''abstract data.'' That is, our programs should
   use data in such a way as to make no assumptions about the data
   that are not strictly necessary for performing the task at hand.
-  At the same time, a <a name="%_idx_1286"></a><a name="%_idx_1288"></a>``concrete'' data representation is defined
+  At the same time, a <a name="%_idx_1286"></a><a name="%_idx_1288"></a>''concrete'' data representation is defined
   independent of the programs that use the data. The interface
   between these two parts of our system will be a set of
   procedures, called <a name="%_idx_1290"></a><em>selectors</em>
@@ -289,11 +289,11 @@
   <p>We can envision the structure of the rational-number system as
   shown in figure&nbsp;<a href="#%_fig_2.1">2.1</a>. The horizontal
   lines represent <em>abstraction barriers</em> that isolate
-  different ``levels'' of the system. At each level, the barrier
+  different ''levels'' of the system. At each level, the barrier
   separates the programs (above) that use the data abstraction from
   the programs (below) that implement the data abstraction.
   Programs that use rational numbers manipulate them solely in
-  terms of the procedures supplied ``for public use'' by the
+  terms of the procedures supplied ''for public use'' by the
   rational-number package: <tt>add-rat</tt>, <tt>sub-rat</tt>,
   <tt>mul-rat</tt>, <tt>div-rat</tt>, and <tt>equal-rat?</tt>.
   These, in turn, are implemented solely in terms of the <a name="%_idx_1382"></a><a name="%_idx_1384"></a>constructor and
@@ -429,7 +429,7 @@
   specified by the latter three procedures.</p>
 
   <p>But exactly what is meant by <em>data</em>? It is not enough
-  to say ``whatever is implemented by the given selectors and
+  to say ''whatever is implemented by the given selectors and
   constructors.'' Clearly, not every arbitrary set of three
   procedures can serve as an appropriate basis for the
   rational-number implementation. We need to guarantee that,
@@ -454,7 +454,7 @@
   representation.<a href="#footnote_Temp_140" name="call_footnote_Temp_140" id="call_footnote_Temp_140"><sup><small>5</small></sup></a></p>
 
   <p><a name="%_idx_1446"></a><a name="%_idx_1448"></a>This point
-  of view can serve to define not only ``high-level'' data objects,
+  of view can serve to define not only ''high-level'' data objects,
   such as rational numbers, but lower-level objects as well.
   <a name="%_idx_1450"></a>Consider the notion of a pair, which we
   used in order to define our rational numbers. We never actually
@@ -508,7 +508,7 @@
   implementation of pairs is a valid implementation, and if we
   access pairs using only <tt>cons</tt>, <tt>car</tt>, and
   <tt>cdr</tt> we cannot distinguish this implementation from one
-  that uses ``real'' data structures.</p>
+  that uses ''real'' data structures.</p>
 
   <p>The point of exhibiting the procedural representation of pairs
   is not that our language works this way (Scheme, and Lisp systems
@@ -596,7 +596,7 @@
   <div align="left"><img src="ch2-Z-G-8.gif" border="0" /></div>
 
   <p>Resistance values are usually known only up to some <a name="%_idx_1484"></a>tolerance guaranteed by the manufacturer of the
-  resistor. For example, if you buy a resistor labeled ``6.8 ohms
+  resistor. For example, if you buy a resistor labeled ''6.8 ohms
   with 10% tolerance'' you can only be sure that the resistor has a
   resistance between 6.8 - 0.68 = 6.12 and 6.8 + 0.68 = 7.48 ohms.
   Thus, if you have a 6.8-ohm 10% resistor in parallel with a
@@ -605,15 +605,15 @@
   bounds) to about 2.97 ohms (if the two resistors are at the upper
   bounds).</p>
 
-  <p>Alyssa's idea is to implement ``interval arithmetic'' as a set
-  of arithmetic operations for combining ``intervals'' (objects
+  <p>Alyssa's idea is to implement ''interval arithmetic'' as a set
+  of arithmetic operations for combining ''intervals'' (objects
   that represent the range of possible values of an inexact
   quantity). The result of adding, subtracting, multiplying, or
   dividing two intervals is itself an interval, representing the
   range of the result.</p>
 
   <p>Alyssa postulates the existence of an abstract object called
-  an ``interval'' that has two endpoints: a lower bound and an
+  an ''interval'' that has two endpoints: a lower bound and an
   upper bound. She also presumes that, given the endpoints of an
   interval, she can construct the interval using the data
   constructor <a name="%_idx_1486"></a><tt>make-interval</tt>.
@@ -699,7 +699,7 @@
 
   <p><a name="%_thm_2.11"></a> <b>Exercise
   2.11.</b>&nbsp;&nbsp;<a name="%_idx_1514"></a>In passing, Ben
-  also cryptically comments: ``By testing the signs of the
+  also cryptically comments: ''By testing the signs of the
   endpoints of the intervals, it is possible to break
   <tt>mul-interval</tt> into nine cases, only one of which requires
   more than two multiplications.'' Rewrite this procedure using
@@ -792,7 +792,7 @@
   She says that a formula to compute with intervals using Alyssa's
   system will produce tighter error bounds if it can be written in
   such a form that no variable that represents an uncertain number
-  is repeated. Thus, she says, <tt>par2</tt> is a ``better''
+  is repeated. Thus, she says, <tt>par2</tt> is a ''better''
   program for parallel resistances than <tt>par1</tt>. Is she
   right? Why?</p>
 
@@ -810,14 +810,14 @@
   <div class="footnote">
     <p><a href="#call_footnote_Temp_133" name="footnote_Temp_133" id="footnote_Temp_133"><sup><small>2</small></sup></a> The name
     <a name="%_idx_1332"></a><tt>cons</tt> stands for
-    ``construct.'' The names <a name="%_idx_1334"></a><tt>car</tt>
+    ''construct.'' The names <a name="%_idx_1334"></a><tt>car</tt>
     and <a name="%_idx_1336"></a><tt>cdr</tt> derive from the
     original implementation of Lisp on the <a name="%_idx_1338"></a><a name="%_idx_1340"></a>IBM 704. That machine
     had an addressing scheme that allowed one to reference the
-    ``address'' and ``decrement'' parts of a memory location.
-    <tt>Car</tt> stands for ``Contents of Address part of
-    Register'' and <tt>cdr</tt> (pronounced ``could-er'') stands
-    for ``Contents of Decrement part of Register.''</p>
+    ''address'' and ''decrement'' parts of a memory location.
+    <tt>Car</tt> stands for ''Contents of Address part of
+    Register'' and <tt>cdr</tt> (pronounced ''could-er'') stands
+    for ''Contents of Decrement part of Register.''</p>
 
     <p><a href="#call_footnote_Temp_135" name="footnote_Temp_135" id="footnote_Temp_135"><sup><small>3</small></sup></a> Another
     way to define the selectors and constructor is</p>
@@ -857,7 +857,7 @@
     rigorously. There are two approaches to giving such a
     formulation. One, pioneered by <a name="%_idx_1422"></a>C. A.
     R. Hoare (1972), is known as the method of <a name="%_idx_1424"></a><a name="%_idx_1426"></a><em>abstract
-    models</em>. It formalizes the ``procedures plus conditions''
+    models</em>. It formalizes the ''procedures plus conditions''
     specification as outlined in the rational-number example above.
     Note that the condition on the rational-number representation
     was stated in terms of facts about integers (equality and
@@ -869,9 +869,9 @@
     <a name="%_idx_1434"></a>Wagner, and <a name="%_idx_1436"></a>Wright at IBM (see Thatcher, Wagner, and
     Wright 1978), and by <a name="%_idx_1438"></a>Guttag at Toronto
     (see Guttag 1977), is called <a name="%_idx_1440"></a><a name="%_idx_1442"></a><em>algebraic specification</em>. It regards
-    the ``procedures'' as elements of an abstract algebraic system
+    the ''procedures'' as elements of an abstract algebraic system
     whose behavior is specified by axioms that correspond to our
-    ``conditions,'' and uses the techniques of abstract algebra to
+    ''conditions,'' and uses the techniques of abstract algebra to
     check assertions about data objects. Both methods are surveyed
     in the paper by <a name="%_idx_1444"></a>Liskov and Zilles
     (1975).</p>

@@ -52,7 +52,7 @@
   if these replacements could be done simultaneously, but in our
   model of register machines we will assume that only one register
   can be assigned a new value at each step. To accomplish the
-  replacements, our machine will use a third ``temporary''
+  replacements, our machine will use a third ''temporary''
   register, which we call <tt>t</tt>. (First the remainder will be
   placed in <tt>t</tt>, then the contents of <tt>b</tt> will be
   placed in <tt>a</tt>, and finally the remainder stored in
@@ -65,7 +65,7 @@
   way to assign a value to a register is indicated by an arrow with
   an <tt>X</tt> behind the head, pointing from the source of data
   to the register. We can think of the <tt>X</tt> as a button that,
-  when pushed, allows the value at the source to ``flow'' into the
+  when pushed, allows the value at the source to ''flow'' into the
   designated register. The label next to each button is the name we
   will use to refer to the button. The names are arbitrary, and can
   be chosen to have mnemonic value (for example, <tt>a&lt;-b</tt>
@@ -309,19 +309,19 @@
 
   <p>To obtain this form of description, we will replace the
   arbitrary button and operation names by the definitions of their
-  behavior. That is, instead of saying (in the controller) ``Push
+  behavior. That is, instead of saying (in the controller) ''Push
   button <tt>t&lt;-r</tt>'' and separately saying (in the data
-  paths) ``Button <tt>t&lt;-r</tt> assigns the value of the
-  <tt>rem</tt> operation to register <tt>t</tt>'' and ``The
+  paths) ''Button <tt>t&lt;-r</tt> assigns the value of the
+  <tt>rem</tt> operation to register <tt>t</tt>'' and ''The
   <tt>rem</tt> operation's inputs are the contents of registers
   <a name="%_idx_5516"></a><a name="%_idx_5518"></a><a name="%_idx_5520"></a><a name="%_idx_5522"></a><a name="%_idx_5524"></a><a name="%_idx_5526"></a><tt>a</tt> and
-  <tt>b</tt>,'' we will say (in the controller) ``Push the button
+  <tt>b</tt>,'' we will say (in the controller) ''Push the button
   that assigns to register <tt>t</tt> the value of the <tt>rem</tt>
   operation on the contents of registers <tt>a</tt> and
   <tt>b</tt>.'' Similarly, instead of saying (in the controller)
-  ``Perform the <tt>=</tt> test'' and separately saying (in the
-  data paths) ``The <tt>=</tt> test operates on the contents of
-  register <tt>b</tt> and the constant 0,'' we will say ``Perform
+  ''Perform the <tt>=</tt> test'' and separately saying (in the
+  data paths) ''The <tt>=</tt> test operates on the contents of
+  register <tt>b</tt> and the constant 0,'' we will say ''Perform
   the <tt>=</tt> test on the <a name="%_idx_5528"></a><a name="%_idx_5530"></a>contents of register <tt>b</tt> and the constant
   0.'' We will omit the data-path description, leaving only the
   controller sequence. Thus, the GCD machine is described as
@@ -473,14 +473,14 @@
   in Machine Design</a></h3>
 
   <p><a name="%_idx_5546"></a> We will often define a machine to
-  include ``primitive'' operations that are actually very complex.
+  include ''primitive'' operations that are actually very complex.
   For example, in sections&nbsp;<a href="book-Z-H-34.html#%_sec_5.4">5.4</a> and <a href="book-Z-H-35.html#%_sec_5.5">5.5</a> we will treat Scheme's
   environment manipulations as primitive. Such abstraction is
   valuable because it allows us to ignore the details of parts of a
   machine so that we can concentrate on other aspects of the
   design. The fact that we have swept a lot of complexity under the
   rug, however, does not mean that a machine design is unrealistic.
-  We can always replace the complex ``primitives'' by simpler
+  We can always replace the complex ''primitives'' by simpler
   primitive operations.</p>
 
   <p>Consider the GCD machine. The machine has an instruction that
@@ -961,7 +961,7 @@
   of register values. These values must be restored in the reverse
   of the order in which they were saved, since in a nest of
   recursions the last subproblem to be entered is the first to be
-  finished. This dictates the use of a <em>stack</em>, or ``last
+  finished. This dictates the use of a <em>stack</em>, or ''last
   in, first out'' data structure, to save register values. We can
   extend the register-machine language to include a stack by adding
   two kinds of instructions: Values are placed <a name="%_idx_5574"></a><a name="%_idx_5576"></a><a name="%_idx_5578"></a><a name="%_idx_5580"></a>on the stack using a
@@ -987,7 +987,7 @@
   factorial subroutine that returns to the entry point stored in
   the <tt>continue</tt> register. Around each subroutine call, we
   save and restore <tt>continue</tt> just as we do the <tt>n</tt>
-  register, since each ``level'' of the factorial computation will
+  register, since each ''level'' of the factorial computation will
   use the same <tt>continue</tt> register. That is, the factorial
   subroutine must put a new value in <tt>continue</tt> when it
   calls itself for a subproblem, but it will need the old value in
